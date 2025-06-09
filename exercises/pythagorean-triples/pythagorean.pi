@@ -1,0 +1,17 @@
+import cp.
+
+triples(N,A,B,C) =>
+    A :: 1..N,
+    B :: 1..N,
+    C :: 1..N,
+    A * A + B * B #= C*C,
+    A #<= B.
+
+main => 
+    N = 100,
+    triples(N,A,B,C),
+    Triples = {A,B,C},
+    Results = solve_all(Triples),
+    foreach(R in Results)
+        println(R)
+    end. 
