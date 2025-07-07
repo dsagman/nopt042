@@ -1,0 +1,15 @@
+main([XS,X]) =>
+    List = parse_term(XS),
+    Item = parse_term(X),
+    R = count_occurrences(List, Item),
+    println(R).
+
+% count_occurrences([], _) = 0.
+% count_occurrences([H|T], X) = R =>
+%         if H == X 
+%             then R = 1 + count_occurrences(T, X) 
+%             else R = count_occurrences(T,X).
+
+% count_occurrences(XS,X) = len([I : I in XS, I == X]).
+
+count_occurrences(XS,X) = sum([1 : X in XS]).

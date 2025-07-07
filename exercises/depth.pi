@@ -1,0 +1,7 @@
+main([NString]) =>
+    Nodes = parse_term(NString),
+    print(depth(Nodes)).
+
+depth([]) = 0.
+depth(nil) = -1.
+depth(node(_,L,R)) = 1 + max(depth(L),depth(R)).

@@ -1,0 +1,5 @@
+import util.
+
+main([MS]) =>
+    Matrix = parse_term(MS),
+    println(transpose(Matrix)).
